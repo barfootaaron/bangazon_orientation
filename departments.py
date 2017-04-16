@@ -8,6 +8,8 @@ class Department(object):
       self.name = name
       self.supervisor = supervisor
       self.size = employee_count
+      self.employees = []
+      # Department.budget serves as the base budget for derived Department classes
       Department.budget = 10000
 
   def get_name(self):
@@ -119,7 +121,8 @@ class InformationTechnology(Department):
 class Sales(Department):
   """Class for representing Sales department
 
-  Methods: __init__, add_sales_policy, get_sales_policy, add_sales_presentation, get_sales_presentation, meet, get_budget
+  Methods: __init__, add_sales_policy, get_sales_policy, add_sales_presentation, 
+  get_sales_presentation, meet, get_budget
   """
 
   def __init__(self, name, supervisor, employee_count):
@@ -162,7 +165,8 @@ class Sales(Department):
 class Marketing(Department):
   """Class for representing Marketing department
 
-  Methods: __init__, add_advertising_policy, get_advertising_policy, add_advertiser, get_advertiser etc.
+  Methods: __init__, add_advertising_policy, get_advertising_policy, add_advertiser,
+  get_advertiser etc.
   """
 
   def __init__(self, name, supervisor, employee_count):

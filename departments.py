@@ -1,3 +1,6 @@
+###########################
+## Base Department Class ##
+###########################
 class Department(object):
   """Parent class for all departments
 
@@ -20,29 +23,29 @@ class Department(object):
 
   def get_supervisor(self):
     """Returns the name of the supervisor"""
-
     return self.supervisor
 
   def meet():
     """ Provides instructions regarding meetings for employees """
     print("Everyone meet in {}'s office".format(self.supervisor))  
 
-  # Make a method on Department named get_budget(). 
-  # It will set, and return the base budget that each department gets each year.
+  
   def get_budget(self):
     """Returns the budget for respective Department instance"""
     return self.budget
+
 
   def add_employee(self, employee):
     """Adds an employee to the set, employee accepts existing instances of employee"""
     self.employees.append(employee)
     return self.employees
 
+
   def remove_employee(self, employee):
     """Removes an employee to the set, employee accepts existing instances of employee""" 
-
     self.employees.remove(employee)
     return self.employees 
+
 
   def get_employees(self):
     """Returns the set of employees for the department instance"""  
@@ -51,9 +54,9 @@ class Department(object):
       print("   ", employee.fn, employee.ln)
 
 
-#############################
-#### HR Department Class ####
-#############################
+#########################
+## HR Department Class ##
+#########################
 class HumanResources(Department):
   """Class for representing Human Resources department
 
@@ -84,15 +87,10 @@ class HumanResources(Department):
     self.budget = Department.budget + 2000
     return self.budget 
 
-     
 
-########################################################################
-## Create 3 department classes that derive from Base Department class ##
-########################################################################
-
-#############################
-#### IT Department Class ####
-#############################
+#########################
+## IT Department Class ##
+#########################
 class InformationTechnology(Department):
   """Class for representing IT department
 
@@ -133,9 +131,9 @@ class InformationTechnology(Department):
     return self.budget 
 
 
-################################
-#### Sales Department Class ####
-################################
+############################
+## Sales Department Class ##
+############################
 class Sales(Department):
   """Class for representing Sales department
 
@@ -177,9 +175,9 @@ class Sales(Department):
     return self.budget 
 
 
-####################################
-#### Marketing Department Class ####
-####################################
+################################
+## Marketing Department Class ##
+################################
 class Marketing(Department):
   """Class for representing Marketing department
 

@@ -76,7 +76,21 @@ if __name__ == '__main__':
   ## Create insance of a WearhouseEmployee and HumanResourcesEmployee ##
   ######################################################################
   klay = HumanResourcesEmployee('Klay', 'Thompson')
-  draymond = WarehouseEmployee('Draymond', 'Green')
+  draymond = HumanResourcesEmployee('Draymond', 'Green')
+  michael = HumanResourcesEmployee('Michael', 'Jordan')
+
+  kristine = InformationTechnologyEmployee('Kristine', 'Leahey')
+  nick = InformationTechnologyEmployee('Nick', 'Wright')
+  jason = InformationTechnologyEmployee('Jason', 'Whitlock')
+
+  bob = SalesEmployee('Bob', 'Sagget')
+  dennis = SalesEmployee('Dennis', 'Miller')
+  colin = SalesEmployee('Colin', 'Cowherd')
+
+  tim = MarketingEmployee('Tim', 'Allen')
+  tom = MarketingEmployee('Tom', 'Hanks')
+  justin = MarketingEmployee('Justin', 'Timberlake')
+
 
   print("Klay works", klay.hours_per_week, "hours per week")
   print("Draymond works", draymond.hours_per_week, "hours per week")
@@ -87,8 +101,21 @@ if __name__ == '__main__':
   ## Test add_employee() ##
   #########################
   hr_dept.add_employee(klay)
-  hr_dept.add_employee(kobe)
-  hr_dept.add_employee(shaq)
+  hr_dept.add_employee(draymond)
+  hr_dept.add_employee(michael)
+
+  it_dept.add_employee(kristine)
+  it_dept.add_employee(nick)
+  it_dept.add_employee(jason)
+
+  sales_dept.add_employee(bob)
+  sales_dept.add_employee(dennis)
+  sales_dept.add_employee(colin)
+
+  marketing_dept.add_employee(tim)
+  marketing_dept.add_employee(tom)
+  marketing_dept.add_employee(justin)
+
   # print(hr_dept.employees)
 
   ############################
@@ -101,6 +128,9 @@ if __name__ == '__main__':
   ## Test get_employees() ##
   ##########################
   hr_dept.get_employees()
+  it_dept.get_employees()
+  sales_dept.get_employees()
+  marketing_dept.get_employees()
 
 
 

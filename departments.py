@@ -1,7 +1,8 @@
 class Department(object):
   """Parent class for all departments
 
-  Methods: __init__, get_name(), get_supervisor(), meet(), get_budget()
+  Methods: __init__, get_name(), get_supervisor(), meet(), get_budget(),
+  add_employee(), remove_employee(), get_employees()
   """
 
   def __init__(self, name, supervisor, employee_count):
@@ -31,6 +32,23 @@ class Department(object):
   def get_budget(self):
     """Returns the budget for respective Department instance"""
     return self.budget
+
+  def add_employee(self, employee):
+    """Adds an employee to the set, employee accepts existing instances of employee"""
+    self.employees.append(employee)
+    return self.employees
+
+  def remove_employee(self, employee):
+    """Removes an employee to the set, employee accepts existing instances of employee""" 
+
+    self.employees.remove(employee)
+    return self.employees 
+
+  def get_employees(self):
+    """Returns the set of employees for the department instance"""  
+    print("Department:", self.name)
+    for employee in self.employees:
+      print("   ", employee.fn, employee.ln)
 
 
 #############################

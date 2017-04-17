@@ -9,10 +9,13 @@ if __name__ == '__main__':
   #########################################################################
   ## Create an instance of each class that derives from Department class ##
   #########################################################################
-  hr_dept = HumanResources("Human Resources Dept", "Dr. Feelgood", 45)
-  it_dept = InformationTechnology("Information Technology Dept", "Bill Gates", 30)
-  sales_dept = Sales("Sales Dept", "Michael Scott", 50)
-  marketing_dept = Marketing("Marketing Dept", "Mr. Charismatic", 20)
+  hr_dept = HumanResources("Human Resources", "Dr. Feelgood", 45)
+
+  it_dept = InformationTechnology("Information Technology", "Bill Gates", 30)
+
+  sales_dept = Sales("Sales", "Michael Scott", 50)
+
+  marketing_dept = Marketing("Marketing", "Mr. Charismatic", 20)
 
   #################################################
   ## Print names of department instances created ##
@@ -51,13 +54,12 @@ if __name__ == '__main__':
   
   print("---------------------------")
 
-  ######################################################
-  ## Create insance of Employee and test eat() method ##
-  ######################################################
+  #####################################################################
+  ## Create insance of Employee and test all eat() method signatures ##
+  #####################################################################
   kobe = Employee("Kobe", "Bryant")
   shaq= Employee("Shaq", "O'Neal")
   kevin = Employee("Kevin", "Durant")
-
   steph = Employee('Steph', 'Curry')
 
   steph.eat()
@@ -67,6 +69,39 @@ if __name__ == '__main__':
   steph.eat(companions=[kobe.fn, shaq.fn, kevin.fn])
 
   steph.eat("cheeseburger ", [kobe.fn, shaq.fn, kevin.fn])
+
+  print("---------------------------")
+
+  ######################################################################
+  ## Create insance of a WearhouseEmployee and HumanResourcesEmployee ##
+  ######################################################################
+  klay = HumanResourcesEmployee('Klay', 'Thompson')
+  draymond = WarehouseEmployee('Draymond', 'Green')
+
+  print("Klay works", klay.hours_per_week, "hours per week")
+  print("Draymond works", draymond.hours_per_week, "hours per week")
+
+  print("---------------------------")
+
+  #########################
+  ## Test add_employee() ##
+  #########################
+  hr_dept.add_employee(klay)
+  hr_dept.add_employee(kobe)
+  hr_dept.add_employee(shaq)
+  # print(hr_dept.employees)
+
+  ############################
+  ## Test remove_employee() ##
+  ############################
+  # hr_dept.remove_employee(kobe)
+  # print(hr_dept.employees)
+
+  ##########################
+  ## Test get_employees() ##
+  ##########################
+  hr_dept.get_employees()
+
 
 
 
